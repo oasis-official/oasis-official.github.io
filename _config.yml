@@ -44,3 +44,5 @@ color_scheme: nil
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+ga_tracking: UA-135215462-1
