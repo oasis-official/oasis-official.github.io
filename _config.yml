@@ -22,11 +22,11 @@ url: "https://oasis-official.github.io" # the base hostname & protocol for your 
 twitter_username: jekyllrb
 github_username:  oasis-official
 
-remote_theme: pmarsceill/just-the-docs
+#remote_theme: pmarsceill/just-the-docs
 
 # Build settings
 markdown: kramdown
-theme: just-the-docs
+#theme: just-the-docs
 plugins:
   - jekyll-feed
 
