@@ -67,7 +67,8 @@ dao 명
 * `false`(defalut) : 제약 없음
 
 ## isResultTypeMap
-* 조회된 결과를 Map으로 반환합니다. `isSingleRowOnly` property 가 `true` 인 경우만 사용할 수 있습니다. 
+* 조회된 결과를 Map으로 반환합니다. 
+* 조회된 결과가 2건 이상이면 `com.dkunc.oasis.exception.TooManyRowsException` 예외가 발생합니다.
 ### Values
 * `true` : 조회된 결과를 Map으로 반환
 * `false`(defalut) : 제약 없음
