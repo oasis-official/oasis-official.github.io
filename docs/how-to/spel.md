@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Task에서 SpEL(Spring Expression Language) 
+title: Task에서 SpEL 사용하는 방법
 parent: How-to
 nav_order: 1
 ---
