@@ -42,7 +42,10 @@ dao 이름을 지정합니다. null이면 `com.dkunc.oasis.exception.MissingDefa
 dao 명
 
 ## paramKey
-쿼리에 사용할 파라미터 Key를 지정합니다. null이면 `defaultParam` 으로 자동 설정됩니다. 만약 paramKey에 null이 아닌 값이 설정됐는데 실행할 떄 그 값을 찾을 수 없는 경우 `com.dkunc.oasis.exception.MissingDefaultValueException` 예외가 발생합니다.
+* 쿼리에 사용할 파라미터 Key를 지정합니다. null이면 `defaultParam` 으로 자동 설정됩니다. 만약 paramKey에 null이 아닌 값이 설정됐는데 실행할 떄 그 값을 찾을 수 없는 경우 `com.dkunc.oasis.exception.MissingDefaultValueException` 예외가 발생합니다.
+* paramKey를 `,` 를 구분자로 복수개를 입력할 수 있습니다.
+* paramKey들은 Map으로 묶인뒤 query의 parameter로 전달됩니다.
+
 ### value
 파라미터 key명
 
@@ -64,7 +67,8 @@ dao 명
 * `false`(defalut) : 제약 없음
 
 ## isResultTypeMap
-* 조회된 결과를 Map으로 반환합니다. `isSingleRowOnly` property 가 `true` 인 경우만 사용할 수 있습니다. 
+* 조회된 결과를 Map으로 반환합니다. 
+* 조회된 결과가 2건 이상이면 `com.dkunc.oasis.exception.TooManyRowsException` 예외가 발생합니다.
 ### Values
 * `true` : 조회된 결과를 Map으로 반환
 * `false`(defalut) : 제약 없음
