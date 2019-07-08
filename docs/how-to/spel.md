@@ -16,12 +16,12 @@ OASIS에서는 `com.dkunc.oasis.process.ProcessController`에서 Task 수행 전
 # 기본 SpEL 설명
 Javascript에서 배열기호(`[]`)를 써서 Json 다루는 방법과 동일한 방법으로 참조한다.
  1. 객체형 : Java의 Map형태 
- ```
+ ```java
 	value = Obj['key']
 	Obj['key'] = 1000
-```	  
-2. 배열형 : Java의 List형태
 ```
+2. 배열형 : Java의 List형태
+```java
    value = Obj[0]
    Obj[10] = 1000
 ```	
@@ -48,8 +48,8 @@ SpEL은 실시간으로 자바 코드로 변경되어 실행된다.
 
 ## context내 변수 처리
 context는 Map과 동일한 방법으로 사용한다.[^1]  
->**note:**  
 context 자체는 `#root` 표현식을 사용한다. `#root`는 생략 가능하다.
+
 ```java
 #root[i] = 10
 or
