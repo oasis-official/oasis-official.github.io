@@ -34,7 +34,7 @@ Task에 `action` 이 설정되어 있으면 해당 값을 사용하고, 없으�
 서브서비스의 DbTask 등에서 `isServiceResult` 프로퍼티로 설정한 `DaoResult` 의
 키 들은 부모 서비스 컨텍스트의 `serviceResponseTargetKeys` 정보에 추가되고, 데이터 정보도 가져옵니다.
 만약, 같은 키가 이미 있는 경우는 덮어쓰니 유의하시기 바랍니다.
-단, `fullPathKey` 프로퍼티가 `true` 인 경우 `subServiceId.key` 형태로 부모 컨텍스트에 저장됩니다.
+단, `fullPathKey` 프로퍼티가 `true` 인 경우 `subServiceId_key` 형태로 부모 컨텍스트에 저장됩니다.
 
 
 # 속성
