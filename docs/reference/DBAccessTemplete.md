@@ -37,7 +37,7 @@ MapperBaseDbAccessTemplate (com.dkunc.oasis.task.commonDbTask)
 
 # 속성
 ## dao
-dao 이름을 지정합니다. null이면 `com.dkunc.oasis.exception.MissingDefaultValueException` 예외가 발생합니다.
+dao 이름을 지정합니다. 지정을 생략하면 context에 기본서비스 DAO(defaultServiceDao) 를 사용합니다. 이것도 없으면 `com.dkunc.oasis.exception.MissingDefaultValueException` 예외가 발생합니다.
 ### value
 dao 명
 

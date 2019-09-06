@@ -10,5 +10,5 @@ permalink: /docs/cactus
 
 
 # 현재 버전
-1.0.0-SNAPSHOT
+1.0.2-SNAPSHOT
 {: .fs-6 .fw-300 }

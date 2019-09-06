@@ -11,7 +11,7 @@ nav_order: 1
 {:toc}
 
 ---
-문서버전 ver:1.0
+문서버전 ver:1.1
 # 프로퍼티 추가
 `cactus.version` 프로퍼티를 기존 프로젝트에 추가합니다.
 # 의존성 교체
@@ -21,7 +21,7 @@ nav_order: 1
 ```xml
 <project>
     <properties>
-        <cactus.version>1.0.0-SNAPSHOT</cactus.version>
+        <cactus.version>1.0.2-SNAPSHOT</cactus.version>
     </properties>
 
     <dependencies>
