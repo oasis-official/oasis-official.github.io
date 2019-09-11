@@ -10,7 +10,7 @@ nav_order: 1
 
 # 사용방법 및 유의사항
 ## 부모 컨텍스트 사용
-부모 컨텍스트를 그대로 유지하고자 한다면 Task 에 `newContext` 프로퍼티를 `false` 로 설정해야 합니다.
+부모 컨텍스트를 그대로 유지하고자 한다면 Task 에 `useParentContext` 프로퍼티를 `true` 로 설정해야 합니다.
 이 프로퍼티가 설정되면 아래에 언급한 `DefaultServiceDao` 와 `action` 프로퍼티를 제외한 다른 속성은 무시합니다.
 Task에 `action` 이 설정되어 있으면 해당 값을 사용하고, 없으면 부모 컨텍스트의 `action` 값을 사용합니다.
 
@@ -33,8 +33,8 @@ Task에 `action` 이 설정되어 있으면 해당 값을 사용하고, 없으�
 ## ResponseTarketKey(조회 결과키) 가져오기
 서브서비스의 DbTask 등에서 `isServiceResult` 프로퍼티로 설정한 `DaoResult` 의
 키 들은 부모 서비스 컨텍스트의 `serviceResponseTargetKeys` 정보에 추가되고, 데이터 정보도 가져옵니다.
-만약, 같은 키가 이미 있는 경우는 덮어쓰니 유의하시기 바랍니다.
-단, `fullPathKey` 프로퍼티가 `true` 인 경우 `subServiceId_key` 형태로 부모 컨텍스트에 저장됩니다.
+만약, **같은 키가 이미 있는 경우는 덮어쓰니 유의하시기 바랍니다.**
+단, `useFullNameReturnKey` 프로퍼티가 `true` 인 경우 `subServiceId_key` 형태로 부모 컨텍스트에 저장됩니다.
 
 
 # 속성
@@ -42,11 +42,13 @@ Task에 `action` 이 설정되어 있으면 해당 값을 사용하고, 없으�
 실행할 서비스 ID
 ## action
 서비스 분기를 위한 Branch Name
-## newContext
-false 이면 부모 서비스 컨텍스트를 상속
+## useParentContext
+### value
+* true : 부모 서비스 컨텍스트를 상속
 ## passKey
 서브 서비스로 전달할 Key 목록. ,(comma)로 구분
 ## returnKey
 서브 서비스 컨텍스트에서 가져올 Key 목록. ,(comma)로 구분
-## fullPathKey
-true 이면 서비스 결과 키의 이름을 서비스 이름과 붙여서 부모 서비스 컨텍스트에 저장
+## useFullNameReturnKey
+### value
+* true : 서비스 결과 키의 이름을 서비스 이름과 붙여서 부모 서비스 컨텍스트에 저장

@@ -9,5 +9,5 @@ permalink: /docs/updates
 # 현재 버전
 
 
-1.7.2-NAPSHOT
+1.7.4-NAPSHOT
 {: .fs-6 .fw-300 }
