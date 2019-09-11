@@ -40,15 +40,20 @@ Task에 `action` 이 설정되어 있으면 해당 값을 사용하고, 없으�
 # 속성
 ## serviceId (필수)
 실행할 서비스 ID
+
 ## action
 서비스 분기를 위한 Branch Name
+
 ## useParentContext
 ### value
 * true : 부모 서비스 컨텍스트를 상속
+
 ## passKey
 서브 서비스로 전달할 Key 목록. ,(comma)로 구분
+
 ## returnKey
 서브 서비스 컨텍스트에서 가져올 Key 목록. ,(comma)로 구분
+
 ## useFullNameReturnKey
 ### value
 * true : 서비스 결과 키의 이름을 서비스 이름과 붙여서 부모 서비스 컨텍스트에 저장
