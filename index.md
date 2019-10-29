@@ -6,4 +6,4 @@ nav_order: 0
 
 ## Design is development!
 
-1.7.5-SNAPSHOT 버전이 사용 가능합니다.
+1.7.8-SNAPSHOT 버전이 사용 가능합니다.
