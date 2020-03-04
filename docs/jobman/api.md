@@ -2,7 +2,7 @@
 layout: default
 title: API Doc
 nav_order: 1
-parent: jobman
+parent: 작업실행관리 시스템
 ---
 # API
 
