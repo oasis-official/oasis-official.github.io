@@ -9,6 +9,10 @@ permalink: /docs/jobman
 작업실행관리 시스템
 
 
+# 실행방법
+java -jar [배포한 jar 파일]
+
+
 
 
 # 현재 버전
