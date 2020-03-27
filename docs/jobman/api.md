@@ -27,7 +27,7 @@ GET/POST
 
 Query string이나 POST 요청의 Payload에 Json 형태로 파라미터를 줄 수 있습니다. 파라미터는 문자열 형태만 지원합니다.
 
-```
+```json
 {
     "sender":"송신자",
     "from":"20200101",
@@ -42,7 +42,7 @@ GET/POST
 ```
 
 #### 응답 예
-```
+```json
 {
     "status": "SUCCESS",
     "message": "Protocol 3 has added",
@@ -92,7 +92,7 @@ GET/POST
 /api/v1/report/size
 ```
 #### 응답 예
-```
+```json
 {
     "status": "SUCCESS",
     "message": "max queue size",
@@ -110,7 +110,7 @@ GET/POST
 /api/v1/report/front
 ```
 #### 응답 예
-```
+```json
 {
     "status": "SUCCESS",
     "message": "front queue report",
@@ -129,7 +129,7 @@ GET/POST
 /api/v1/report/sending
 ```
 #### 응답 예
-```
+```json
 {
     "status": "SUCCESS",
     "message": "sending transaction report",
@@ -148,7 +148,7 @@ GET/POST
 /api/v1/report/waiting
 ```
 #### 응답 예
-```
+```json
 {
     "status": "SUCCESS",
     "message": "waiting transaction report",
@@ -175,7 +175,7 @@ GET/POST
 
 #### 응답 예
 
-```
+```json
 {
     "status": "SUCCESS",
     "message": "current status",
@@ -203,7 +203,7 @@ GET/POST
 
 #### 응답 예
 
-```
+```json
 {
     "status": "SUCCESS",
     "message": "transaction result",
