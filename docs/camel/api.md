@@ -22,7 +22,26 @@ GET/POST
 /api/v1/stop
 ```
 
-## 요청 작업 시작
+## Protocol 등록
+신규 Protocol을 등록합니다.
+
+```json
+{
+    "protocolId" : "99",
+    "topicId" : "1",
+    "protocolName" : "99name",
+    "sender" : "mock",
+    "protocolType" : "BlockingExclusive",
+    "url" : "http://test"
+}
+```
+
+POST
+```
+/api/v1/register
+```
+
+## Message 전송 대기열에 추가
 요청한 Protocol ID 에 해당하는 Message를 만들어 대기열에 추가합니다.
 
 Query string이나 POST 요청의 Payload에 Json 형태로 파라미터를 줄 수 있습니다. 파라미터는 문자열 형태만 지원합니다.
@@ -51,6 +70,8 @@ GET/POST
 }
 ```
 
+
+
 ## Message 재전송
 Message 전송을 했으나 실패하여 대기열을 막고 있는 Message을 재시작합니다.
 
@@ -60,32 +81,32 @@ GET/POST
 /api/v1/retry/{messageId}
 ```
 
-## 작업 취소
-작업을 시작했으나 실패하여 대기열을 막고 있는 잡을 취소합니다. 취소되는 즉시 그 다음 작업을 시작합니다.
+## Message 전송 취소
+전송을 시작했으나 실패하여 대기열을 막고 있는 Message를 취소합니다. 취소되는 즉시 그 다음 Message 전송을 시작합니다.
 
 GET/POST
 ```
 /api/v1/drop/{messageId}
 ```
 
-## 작업 삭제
-작업 대기열에 있는 잡을 삭제합니다. 대기열을 막고있거나 실행중인 잡은 삭제할 수 없습니다.
+## Message 삭제
+대기열에 있는 Message를 삭제합니다. 대기열을 막고있거나 실행중인 Message는 삭제할 수 없습니다.
 
 GET/POST
 ```
 /api/v1/remove/{messageId}
 ```
 
-## 동시 실행 개수 변경
-동시에 실행할 수 있는 개수를 변경합니다.
+## 동시 전송 개수 변경
+동시에 전송할 수 있는 개수를 변경합니다.
 
 GET/POST
 ```
 /api/v1/size/{size}
 ```
 
-## 동시 실행 개수 조회
-동시에 실행할 수 있는 개수를 조회합니다.
+## 동시 전송 개수 조회
+동시에 전송할 수 있는 개수를 조회합니다.
 
 GET/POST
 ```
@@ -192,6 +213,37 @@ GET/POST
 }
 ```
 
+## Protocol 조회
+시스템에 등록되어 있는 Protocol을 전체 조회합니다.
+
+GET/POST
+```
+/api/v1/report/protocols
+```
+
+#### 응답 예
+```json
+{
+  "responseHeaders" : {
+    "Content-Type" : [ "application/json; charset=UTF-8" ]
+  },
+  "report" : {
+    "registeredProtocols" : [ {
+      "protocolId" : "6",
+      "topicId" : "$Unlimited",
+      "protocolName" : "UnlimitedConcurrent_6",
+      "sender" : "com.dkss.camel.sender.MockTransactionSender",
+      "protocolType" : "com.dkss.camel.protocol.UnlimitedConcurrentProtocol",
+      "maxSlot" : 0,
+      "url" : "http://localhost:8080"
+    }]
+  },
+  "message" : "protocols",
+  "status" : "SUCCESS"
+}
+
+```
+
 ## 실행 실적 조회
 전송 실적을 조회합니다.
 
@@ -231,6 +283,8 @@ GET/POST
     }
 }
 ```
+
+
 
 # 현재 버전
 1.0.0-SNAPSHOT
