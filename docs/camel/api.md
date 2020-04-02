@@ -244,6 +244,32 @@ GET/POST
 
 ```
 
+
+## Topic 조회
+시스템에 등록되어 있는 Topic을 전체 조회합니다.
+
+GET/POST
+```
+/api/v1/report/topics
+```
+
+#### 응답 예
+```json
+{
+  "responseHeaders" : {
+    "Content-Type" : [ "application/json; charset=UTF-8" ]
+  },
+  "report" : {
+    "registeredTopics" : [ {
+      "topicId" : "$Unlimited",
+      "maxSlot" : 0
+    } ]
+  },
+  "message" : "topics",
+  "status" : "SUCCESS"
+}
+```
+
 ## 실행 실적 조회
 전송 실적을 조회합니다.
 
