@@ -281,7 +281,7 @@ GET/POST
 
 GET/POST
 ```
-/api/v1/report/result/{from}/{to}
+/api/v1/report/transactions/{from}/{to}
 ```
 
 #### 응답 예
