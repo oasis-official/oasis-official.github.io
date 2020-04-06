@@ -310,7 +310,34 @@ GET/POST
 }
 ```
 
+## 메시지 상태 조회
+메시지의 현 상태를 조회합니다.
 
+조회할 기간을 파라미터로 전달해야 합니다.
+* **from** 시작시각
+* **to** 종료시각
+* **형태** yyyymmddhh24mi
+* 예시 202003310900
+
+GET/POST
+```
+/api/v1/report/messages/{from}/{to}
+```
+
+#### 응답 예
+
+```json
+{
+  "responseHeaders" : {
+    "Content-Type" : [ "application/json; charset=UTF-8" ]
+  },
+  "report" : {
+    "messageStatus" : [ ]
+  },
+  "message" : "message result",
+  "status" : "SUCCESS"
+}
+```
 
 # 현재 버전
 1.0.0-SNAPSHOT
