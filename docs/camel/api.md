@@ -332,7 +332,14 @@ GET/POST
     "Content-Type" : [ "application/json; charset=UTF-8" ]
   },
   "report" : {
-    "messageStatus" : [ ]
+    "messageStatus" : [ {
+      "messageId" : "9_20200406151227_I_c75f4ccf-acce-444c-9ee0-e93200056483",
+      "protocolId" : "9",
+      "topicId" : "4",
+      "type" : "com.dkss.camel.protocol.LimitedConcurrentProtocol",
+      "date" : "2020-04-06T15:12:27.503",
+      "status" : "DONE"
+    } ]
   },
   "message" : "message result",
   "status" : "SUCCESS"
