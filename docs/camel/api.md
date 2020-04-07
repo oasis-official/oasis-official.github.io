@@ -338,7 +338,8 @@ GET/POST
       "topicId" : "4",
       "type" : "com.dkss.camel.protocol.LimitedConcurrentProtocol",
       "date" : "2020-04-06T15:12:27.503",
-      "status" : "DONE"
+      "status" : "DONE",
+      "parmas" : "a=3;b=5"
     } ]
   },
   "message" : "message result",
