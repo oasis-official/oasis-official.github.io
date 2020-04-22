@@ -49,8 +49,10 @@ Query string이나 POST 요청의 Payload에 Json 형태로 파라미터를 줄 
 ```json
 {
     "sender":"송신자",
-    "from":"20200101",
-    "to":"20200102"
+    "params":{
+        "from":"20200101",
+        "to":"20200102"
+    }
 }
 ```
 
