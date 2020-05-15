@@ -48,7 +48,7 @@ java -jar [배포한 jar 파일]
 |무시|UnlimitedConcurrent|limitedConcurrent|NonBlockingExclusive|
 |막음|   |   |BlockingExclusive|
 
-## Protocl type별 동작 방법
+## Protocol Type별 동작 방법
 
 ### BlockingExclusive
 * 같은 Topic을 가지고 있는 Message를 **순차적**으로 하나씩 전송함
