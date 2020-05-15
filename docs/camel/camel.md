@@ -48,15 +48,20 @@ java -jar [배포한 jar 파일]
 |무시|UnlimitedConcurrent|limitedConcurrent|NonBlockingExclusive|
 |막음|   |   |BlockingExclusive|
 
-## BlockingExclusive
+## Protocl type별 동작 방법
+
+### BlockingExclusive
 * 같은 Topic을 가지고 있는 Message를 **순차적**으로 하나씩 전송함
 * Message 전송에 실패하면 같은 Topic 내의 메시지 전송은 **정지**됨
-## NonBlockingExclusive
+
+### NonBlockingExclusive
 * 같은 Topic을 가지고 있는 Message를 **순차적**으로 하나씩 전송함
 * Message 전송에 실패해도 바로 다음 Message를 전송함
-## UnlimitedConcurrent
+
+### UnlimitedConcurrent
 * Topic에 상관없이 빈 큐가 있으면 즉시 전송함
-## limitedConcurrent
+
+### limitedConcurrent
 * Topic에 지정된 최대 전송갯수 이하로 메시지를 전송함
 
 
