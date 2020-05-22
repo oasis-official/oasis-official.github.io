@@ -22,6 +22,30 @@ GET/POST
 /api/v1/stop
 ```
 
+## 시스템 현재상태
+시스템의 현재 상태를 조회합니다.
+
+GET
+```
+/api/v1/status
+```
+#### 응답 예
+```json
+{
+    "status": "SUCCESS",
+    "message": "current system status",
+    "responseHeaders": {
+        "Content-Type": [
+            "application/json; charset=UTF-8"
+        ]
+    },
+    "report": {
+        "status": "Started"
+    }
+}
+```
+
+
 ## Protocol 등록
 신규 Protocol을 등록합니다.
 
