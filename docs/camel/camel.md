@@ -62,7 +62,7 @@ permalink: /docs/camel
 * Topic에 지정된 최대 전송갯수 이하로 메시지를 전송함
 
 
-* 시스템 설정
+# 시스템 설정
 ### 초기 큐 크기 설정
  - 프로퍼티 : camel.initialQueueSize
  - 기본값 : 20
