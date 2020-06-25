@@ -96,10 +96,18 @@ GET/POST
 }
 ```
 
+## 기존 Message의 파라미터를 복사하여 Message 전송 대기열에 추가
+기존에 만들어진 Message의 파라미터를 복사하여 새로운 Message를 만든 후 전송 대기열에 추가합니다.
 
+
+GET/POST
+```
+/api/v1/copy/{messageId}
+```
 
 ## Message 재전송
-Message 전송을 했으나 실패하여 대기열을 막고 있는 Message을 재시작합니다.
+Message 전송을 했으나 실패하여 대기열을 막고 있는(BLOCKING 상태) Message을 재시작합니다.
+재시작하면 새로운 Transaction이 만들어집니다.
 
 
 GET/POST
