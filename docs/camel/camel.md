@@ -68,7 +68,12 @@ permalink: /docs/camel
  - 기본값 : 20
  - 예) -Dcamel.initialQueueSize=10
 
+### 전송 타임아웃 설정
+ - 프로터티 : camel.sendTimeoutInSecond
+ - 기본값 : 600
+ - 예) -Dcamel.sendTimeoutInSecond=300
+
 
 # 현재 버전
-1.1.19-SNAPSHOT
+2.2.0-SNAPSHOT
 {: .fs-6 .fw-300 }
