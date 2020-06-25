@@ -75,5 +75,5 @@ permalink: /docs/camel
 
 
 # 현재 버전
-2.2.0-SNAPSHOT
+2.3.1-SNAPSHOT
 {: .fs-6 .fw-300 }
