@@ -104,6 +104,20 @@ GET/POST
 ```
 /api/v1/copy/{messageId}
 ```
+#### 응답 예
+
+```json
+{
+    "status": "SUCCESS",
+    "message": "3_20200625161144_I_dfaaac25-8427-4ee0-978d-da72f0fb6b33 is add again.",
+    "responseHeaders": {
+        "Content-Type": [
+            "application/json; charset=UTF-8"
+        ]
+    }
+}
+```
+
 
 ## Message 재전송
 Message 전송을 했으나 실패하여 대기열을 막고 있는(BLOCKING 상태) Message을 재시작합니다.
@@ -130,6 +144,31 @@ GET/POST
 ```
 /api/v1/remove/{messageId}
 ```
+
+## Transaction 중단
+전송중인 Transaction을 강제로 중단합니다.
+
+### 주의사항
+Transaction을 강제로 중단했다고 해서 전송된 메시지가 취소되지는 않습니다. 즉, 실제 수신측에서 정상처리 되었을 수도 있습니다.
+
+GET/POST
+```
+/api/v1/kill/{transactionId}
+```
+
+#### 응답 예
+```json
+{
+    "status": "SUCCESS",
+    "message": "3_E_25d12adc-8f4c-484a-95f7-3ed7b256f633 is killed.",
+    "responseHeaders": {
+        "Content-Type": [
+            "application/json; charset=UTF-8"
+        ]
+    }
+}
+```
+
 
 ## 동시 전송 개수 변경
 동시에 전송할 수 있는 개수를 변경합니다.
