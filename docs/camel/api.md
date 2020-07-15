@@ -9,7 +9,7 @@ parent: 메시지 전송 중계 시스템
 ## 시스템 시작
 대기열에 있는 Message를 전송하는 루프를 시작합니다.
 
-GET/POST
+POST
 ```
 /api/v1/start
 ```
@@ -17,7 +17,7 @@ GET/POST
 ## 시스템 정지
 대기열에 있는 Message를 전송하는 루프를 정지합니다.
 
-GET/POST
+POST
 ```
 /api/v1/stop
 ```
@@ -27,7 +27,7 @@ GET/POST
 
 GET
 ```
-/api/v1/status
+/api/v1/report/status
 ```
 #### 응답 예
 ```json
@@ -81,7 +81,7 @@ Query string이나 POST 요청의 Payload에 Json 형태로 파라미터를 줄 
 ```
 
 
-GET/POST
+POST
 ```
 /api/v1/add/{protocolId}
 ```
@@ -100,7 +100,7 @@ GET/POST
 기존에 만들어진 Message의 파라미터를 복사하여 새로운 Message를 만든 후 전송 대기열에 추가합니다.
 
 
-GET/POST
+POST
 ```
 /api/v1/copy/{messageId}
 ```
@@ -124,7 +124,7 @@ Message 전송을 했으나 실패하여 대기열을 막고 있는(BLOCKING 상
 재시작하면 새로운 Transaction이 만들어집니다.
 
 
-GET/POST
+POST
 ```
 /api/v1/retry/{messageId}
 ```
@@ -132,7 +132,7 @@ GET/POST
 ## Message 전송 취소
 전송을 시작했으나 실패하여 대기열을 막고 있는 Message를 취소합니다. 취소되는 즉시 그 다음 Message 전송을 시작합니다.
 
-GET/POST
+POST
 ```
 /api/v1/drop/{messageId}
 ```
@@ -140,7 +140,7 @@ GET/POST
 ## Message 삭제
 대기열에 있는 Message를 삭제합니다. 대기열을 막고있거나 실행중인 Message는 삭제할 수 없습니다.
 
-GET/POST
+POST
 ```
 /api/v1/remove/{messageId}
 ```
@@ -151,7 +151,7 @@ GET/POST
 ### 주의사항
 Transaction을 강제로 중단했다고 해서 전송된 메시지가 취소되지는 않습니다. 즉, 실제 수신측에서 정상처리 되었을 수도 있습니다.
 
-GET/POST
+POST
 ```
 /api/v1/kill/{transactionId}
 ```
@@ -173,7 +173,7 @@ GET/POST
 ## 동시 전송 개수 변경
 동시에 전송할 수 있는 개수를 변경합니다.
 
-GET/POST
+POST
 ```
 /api/v1/size/{size}
 ```
