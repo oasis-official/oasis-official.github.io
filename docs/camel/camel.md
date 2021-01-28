@@ -5,8 +5,11 @@ nav_order: 1
 has_children: true
 permalink: /docs/camel
 ---
-# camel
-메시지 전송 중계 시스템
+# 메시지 전송 중계 시스템 - camel
+* 수신받은 메시지를 목표 시스템으로 전달하는 시스템
+* 동시간에 많은 메시지를 목표 시스템으로 전달하여 목표 시스템이 과부하가 걸리지 않도록 
+제어하고, 메시지간의 순서 보장, 최대 동시 전달 횟수 보장 등을 수행한다.
+
 
 # 주요 용어
 
@@ -61,6 +64,44 @@ permalink: /docs/camel
 ### limitedConcurrent
 * Topic에 지정된 최대 전송갯수 이하로 메시지를 전송함
 
+# 시스템 자원 구성
+### camel-core.jar
+- 메시지 전달을 위한 핵심 큐를 관리하는 프레임워크
+
+### camel-persistence-jpa.jar
+- camel-core에서 데이터 저장기능을 구현한 구현체
+- hibernate(JPA)를 사용함
+- 의존성
+ * camel-core.jar
+
+### camel-sender.jar
+- camel-core에서 메시지 전달기능을 구현한 구현체
+- HTTP 기반 구현
+- 의존성
+ * camel-core.jar
+
+### camel-api.jar
+- camel-core 기능을 웹으로 노출시키기 위한 REST API Library
+- spring-mvc 사용
+- 의존성
+ * camel-core.jar
+ * camel-persistence-jpa.jar
+
+### camel-config-spring-jpa.jar
+- spring을 이용하여 필요한 의존관계를 설정
+- 의존성
+ * camel-api.jar
+ * camel-core.jar
+ * camel-persistence-jpa.jar
+ * camel-sender.jar
+
+### dmes-cm-api.war
+- DMes-plate 를 위한 웹 구현
+- DB 설정정보, Table 이름 규칙 등 정의
+- 의존성
+ * camel-config-spring-jpa.jar
+
+
 
 # 시스템 설정
 ### 초기 큐 크기 설정
@@ -75,5 +116,5 @@ permalink: /docs/camel
 
 
 # 현재 버전
-2.3.1-SNAPSHOT
+2.4.4-SNAPSHOT
 {: .fs-6 .fw-300 }
