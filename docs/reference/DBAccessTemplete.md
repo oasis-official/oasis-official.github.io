@@ -73,3 +73,8 @@ dao 명
 * `true` : 조회된 결과를 Map으로 반환
 * `false`(defalut) : 제약 없음
 
+## firstRow
+* 조회된 결과에서 첫 번째 행을 Map으로 반환합니다.
+* 조회된 결과가 0건이면 `null` 을 반환합니다.
+### Values
+* `true` : 조회된 결과의 첫 번째 행을 Map으로 반환
