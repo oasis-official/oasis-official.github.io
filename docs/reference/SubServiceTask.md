@@ -10,9 +10,9 @@ nav_order: 1
 
 # 사용방법 및 유의사항
 ## 부모 컨텍스트 사용
-부모 컨텍스트를 그대로 유지하고자 한다면 Task 에 `useParentContext` 프로퍼티를 `true` 로 설정해야 합니다.
-이 프로퍼티가 설정되면 아래에 언급한 `DefaultServiceDao` 와 `action` 프로퍼티를 제외한 다른 속성은 무시합니다.
-Task에 `action` 이 설정되어 있으면 해당 값을 사용하고, 없으면 부모 컨텍스트의 `action` 값을 사용합니다.
+부모 컨텍스트를 서브 서비스에서 사용하고자 한다면 서브서비스 Task 에 `useParentContext` 프로퍼티를 `true` 로 설정해야 합니다.
+이 프로퍼티가 설정되면 컨텍스트가 서브서비스에 전달됩니다. 단, 아래에 언급한 `DefaultServiceDao` 와 `action` 프로퍼티는 제외됩니다.
+서브서비스의 'action' 값을 설정하려면 서브서비스 Task에 `action` 프로퍼티를 설정합니다. 설정하지 않으면 부모 컨텍스트의 `action` 값을 사용합니다.
 
 ## DefaultServiceDao 는 자동 상속
 부모 서비스가 가지고 있는 `DefaultServiceDao` 는 서브서비스로 자동 **상속**합니다.
